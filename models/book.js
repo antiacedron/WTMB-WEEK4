@@ -1,6 +1,7 @@
 module.exports = class Book{
-    constructor (title) {
+    constructor (title,id) {
         this.title=title
+        this.id=id
         this.readers=[] 
         this.cities=[]
     } 
@@ -10,6 +11,6 @@ module.exports = class Book{
         city.books.push (this)   
     }
     static create (obj) {
-        return new Book(obj.title); 
+        return new Book(obj.title,obj.id); 
     } 
 } 
